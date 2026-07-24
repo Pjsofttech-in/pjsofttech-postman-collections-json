@@ -1,0 +1,2281 @@
+{
+  "info": {
+    "_postman_id": "750a0e1c-c80d-42b8-8fc8-3de3a962c876",
+    "name": "NewStudyPoint API",
+    "description": "Auto-generated collection covering all REST endpoints found in the newstudypoint Spring Boot backend (Barcode, Payment, Rules & Regulations, Staff, Study Admission, Study Conduct, Study Inquiry Form, Study Seat Type, Study Source, Study User controllers).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54335742",
+    "_collection_link": "https://go.postman.co/collection/54335742-750a0e1c-c80d-42b8-8fc8-3de3a962c876?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Barcode",
+      "item": [
+        {
+          "name": "Generate StudyPoint Barcode",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/createStudyPointBarcode?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createStudyPointBarcode"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Generate StudyPoint User Barcode",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/createStudyPointUserBarcode?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createStudyPointUserBarcode"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdGFmZnNjQGdtYWlsLmNvbSIsImlhdCI6MTc4NDcyMTE5MCwiZXhwIjoxNzg0NzI0NzkwfQ.7uDNXNW3cB2J_troXalA9xhHeoNbc5bonuz6y_Hry4o",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"studyPaymentId\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/create-order?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create-order"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"razorpayOrderId\": \"order_TGB0Kojpir2p24\",\n  \"razorpayPaymentId\": \"pay_xxx\",\n  \"razorpaySignature\": \"signature_xxx\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/verify-payment?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "verify-payment"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Save Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"paymentMonth\": \"2026-07\",\n  \"amount\": 2000.0,\n  \"gstPercent\": 18,\n  \"gstAmount\": 360,\n  \"totalAmount\": 2360.0,\n  \"paymentMode\": \"UPI\",\n  \"paymentStatus\": \"PAID\",\n  \"transactionId\": \"TXN_8877665544\",\n  \"paymentDate\": \"2026-07-21\",\n  \"remark\": \"Monthly tuition fee payment\",\n  \"createdByEmail\": \"staffsc@gmail.com\",\n  \"role\": \"staff\",\n  \"branchCode\": \"BCH137\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/savePayment?userId=65&admissionId=1&month=2026-07&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "savePayment"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "65"
+                },
+                {
+                  "key": "admissionId",
+                  "value": "1"
+                },
+                {
+                  "key": "month",
+                  "value": "2026-07"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payments By User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getPaymentsByUser?userId={{userId}}&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getPaymentsByUser"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payments By Admission",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getPaymentsByAdmission?admissionId=1&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getPaymentsByAdmission"
+              ],
+              "query": [
+                {
+                  "key": "admissionId",
+                  "value": "1"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payments By User And Date Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getPaymentByUserAndDateRange?role={{role}}&email={{email}}&userId={{userId}}&start=2026-01&end=2026-07",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getPaymentByUserAndDateRange"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "start",
+                  "value": "2026-01"
+                },
+                {
+                  "key": "end",
+                  "value": "2026-07"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rules and Regulations",
+      "item": [
+        {
+          "name": "Create Rules",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ruleTitle\": \"No talking in study hall\",\n  \"description\": \"Maintain silence at all times\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createRules?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createRules"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Rules",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getAllRules?role={{role}}&email={{email}}&branchCode={{branchCode}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllRules"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Rule By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getRuleById/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getRuleById",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Rule",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ruleTitle\": \"Updated rule title\",\n  \"description\": \"Updated description\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/updateRule/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "updateRule",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Rule",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/deleteRule/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteRule",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Staff",
+      "item": [
+        {
+          "name": "Staff Login",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"staffsc@gmail.com\",\n  \"password\": \"123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/stafflogin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "stafflogin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Department Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/departmentlogin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "departmentlogin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Permission For Staff",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/permissionForStaff?staffEmail={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "permissionForStaff"
+              ],
+              "query": [
+                {
+                  "key": "staffEmail",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Permission For Department",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/permissionForDepartment?departmentEmail={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "permissionForDepartment"
+              ],
+              "query": [
+                {
+                  "key": "departmentEmail",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Institute Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getInstituteDetails?instituteEmail={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getInstituteDetails"
+              ],
+              "query": [
+                {
+                  "key": "instituteEmail",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Branch Address",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getBranchAddress?branchCode={{branchCode}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getBranchAddress"
+              ],
+              "query": [
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Study Admission",
+      "item": [
+        {
+          "name": "Create Admission",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"mobNo\": \"9876543210\",\n    \"startdate\": \"2026-07-21\",\n    \"enddate\": \"2026-10-21\",\n    \"remark\": \"Full course access\",\n    \"paymentstatus\": \"PAID\",\n    \"isAdmission\": true,\n    \"seatAmount\": 3500.0,\n    \"discount\": 500,\n    \"createdByEmail\": \"staffsc@gmail.com\",\n    \"role\": \"staff\",\n    \"branchCode\": \"BCH137\",\n    \"gst\": 630,\n    \"gstpercent\": 18,\n    \"paymentDate\": \"2026-07-21\",\n    \"paymentmode\": \"UPI\",\n    \"studyConduct\": \"Offline Classroom\",\n    \"transactionId\": \"TXN_9988776655\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createAdmission?role={{role}}&email={{email}}&userId=65",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createAdmission"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "userId",
+                  "value": "65"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Admissions",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/getAllAdmissions?role={{role}}&email={{email}}&branchCode={{branchCode}}&timeframe=ALL&pageNumber=0&pageSize=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllAdmissions"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                },
+                {
+                  "key": "timeframe",
+                  "value": "ALL"
+                },
+                {
+                  "key": "customStartDate",
+                  "value": "2026-01-01",
+                  "disabled": true
+                },
+                {
+                  "key": "customEndDate",
+                  "value": "2026-12-31",
+                  "disabled": true
+                },
+                {
+                  "key": "pageNumber",
+                  "value": "0"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Admission By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getAdmissionById/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAdmissionById",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Admission",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"seatType\": \"AC\",\n  \"admissionDate\": \"2026-07-21\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/updateAdmission/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "updateAdmission",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Admission",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/deleteAdmission/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteAdmission",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Seat Availability",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/seatAvailability?seatType=AC&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "seatAvailability"
+              ],
+              "query": [
+                {
+                  "key": "seatType",
+                  "value": "AC"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Monthly Admission Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getMonthlyAdmissionCount?year=2026&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getMonthlyAdmissionCount"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2026"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Admission Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getAdmissionStats?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAdmissionStats"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Compare Admissions By Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/compareAdmissionsByYear?year1=2025&year2=2026&role={{role}}&email={{email}}&branchCode={{branchCode}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "compareAdmissionsByYear"
+              ],
+              "query": [
+                {
+                  "key": "year1",
+                  "value": "2025"
+                },
+                {
+                  "key": "year2",
+                  "value": "2026"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Source Wise Revenue",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/sourcewiserevenue?year=2026&month=7&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "sourcewiserevenue"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2026"
+                },
+                {
+                  "key": "month",
+                  "value": "7"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Admissions By User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getAdmissionsByUser/{{userId}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAdmissionsByUser",
+                "{{userId}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Study Conduct",
+      "item": [
+        {
+          "name": "Create Conduct",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"conductName\": \"Morning Batch\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createConduct?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createConduct"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Conducts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/getAllConducts?role={{role}}&email={{email}}&branchCode={{branchCode}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllConducts"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Conduct By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getConductById/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getConductById",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Conduct",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"conductName\": \"Evening Batch\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/updateConduct/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "updateConduct",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Conduct",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/deleteConduct/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteConduct",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Study Inquiry Form",
+      "item": [
+        {
+          "name": "Create Inquiry",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"studentName\": \"John Doe\",\n  \"phoneNumber\": \"9999999999\",\n  \"source\": \"WALK_IN\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createInquiry?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createInquiry"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Inquiries",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/getAllInquiries?role={{role}}&email={{email}}&branchCode={{branchCode}}&timeframe=ALL&pageNumber=0&pageSize=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllInquiries"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                },
+                {
+                  "key": "timeframe",
+                  "value": "ALL"
+                },
+                {
+                  "key": "customStartDate",
+                  "value": "2026-01-01",
+                  "disabled": true
+                },
+                {
+                  "key": "customEndDate",
+                  "value": "2026-12-31",
+                  "disabled": true
+                },
+                {
+                  "key": "pageNumber",
+                  "value": "0"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Inquiry By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getInquiry/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getInquiry",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Inquiry",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"studentName\": \"John Doe\",\n  \"phoneNumber\": \"9999999999\",\n  \"source\": \"WALK_IN\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/updateInquiry/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "updateInquiry",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Inquiry",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/deleteInquiry/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteInquiry",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Monthly Inquiry Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getmonthlyInquiryCount?year=2026&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getmonthlyInquiryCount"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2026"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Daily Inquiry Counts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getDailyInquiryCounts?year=2026&month=7&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getDailyInquiryCounts"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2026"
+                },
+                {
+                  "key": "month",
+                  "value": "7"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Inquiry Counts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getInquiryCounts?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getInquiryCounts"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Inquiry Source Wise Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/inquirysourcewisecount?year=2026&month=7&role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "inquirysourcewisecount"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2026"
+                },
+                {
+                  "key": "month",
+                  "value": "7"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Study Seat Type",
+      "item": [
+        {
+          "name": "Create Seat Type",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"seatTypeName\": \"AC Cabin\",\n  \"price\": 1500,\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createSeatType?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createSeatType"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Seat Types",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/getAllSeatTypes?role={{role}}&email={{email}}&branchCode={{branchCode}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllSeatTypes"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Seat Type By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getSeatTypeById/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getSeatTypeById",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Seat Type",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"seatTypeName\": \"Non-AC Cabin\",\n  \"price\": 1000,\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/updateSeatType/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "updateSeatType",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Seat Type",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/deleteSeatType/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteSeatType",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Study Source",
+      "item": [
+        {
+          "name": "Create Source",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sourceName\": \"Facebook Ad\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createSource?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createSource"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Sources",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/getAllSources?role={{role}}&email={{email}}&branchCode={{branchCode}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllSources"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Source By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getSourceById/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getSourceById",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Source",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sourceName\": \"Instagram Ad\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/updateSource/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "updateSource",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Source",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/deleteSource/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteSource",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Study User",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rajesh Kumar\",\n  \"email\": \"rajesh.kumar@example.com\",\n  \"mobileNumber\": \"9876543210\",\n  \"address\": \"123 Main Street, Shivaji Nagar\",\n  \"preparationFor\": \"UPSC\",\n  \"registrationDate\": \"2026-07-21\",\n  \"emergencyContact\": \"9123456789\",\n  \"gender\": \"Male\",\n  \"state\": \"Maharashtra\",\n  \"district\": \"Pune\",\n  \"city\": \"Pune\",\n  \"taluka\": \"Haveli\",\n  \"pincode\": \"411005\",\n  \"deposit\": 1500.0,\n  \"remark\": \"Paid partial deposit\",\n  \"status\": \"ACTIVE\",\n  \"studySource\": \"Google Search\",\n  \"paymentmode\": \"UPI\",\n  \"paymentstatus\": \"COMPLETED\",\n  \"transactionId\": \"TXN987654321\",\n  \"seatType\": \"Premium Desk\",\n  \"seatNumber\": \"A-12\",\n  \"seatAmount\": 2500.0,\n  \"createdByEmail\": \"admin@studypoint.com\",\n  \"role\": \"STUDENT\",\n  \"branchCode\": \"PUNE-01\",\n  \"password\": \"SecurePassword123\"\n}\n"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createUser?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createUser"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/getAllUsers?role={{role}}&email={{email}}&branchCode={{branchCode}}&timeframe=ALL&pageNumber=0&pageSize=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllUsers"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                },
+                {
+                  "key": "timeframe",
+                  "value": "ALL"
+                },
+                {
+                  "key": "customStartDate",
+                  "value": "2026-01-01",
+                  "disabled": true
+                },
+                {
+                  "key": "customEndDate",
+                  "value": "2026-12-31",
+                  "disabled": true
+                },
+                {
+                  "key": "pageNumber",
+                  "value": "0"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getUserById/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getUserById",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe Updated\",\n  \"email\": \"john@example.com\",\n  \"phoneNumber\": \"9999999999\",\n  \"branchCode\": \"{{branchCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/updateUser/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "updateUser",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/deleteUser/{{id}}?role={{role}}&email={{email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "deleteUser",
+                "{{id}}"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All By Branch Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getAllByBranchCode?role={{role}}&email={{email}}&branchCode={{branchCode}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getAllByBranchCode"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                },
+                {
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "key": "branchCode",
+                  "value": "{{branchCode}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Whatsapp API",
+      "item": [
+        {
+          "name": "Send Whatsapp Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"admissionIdList\": [\n    1,\n    2,\n    3\n  ],\n  \"watiConfigId\": 10,\n  \"branchCode\": \"BCH101\",\n  \"template_id\": 501,\n  \"templateName\": \"welcome_message_template\",\n  \"whatsappNumber\": \"919876543210\",\n  \"parameters\": {\n    \"param1\": \"name\",\n    \"param2\": \"paymentStatus\",\n    \"param3\": \"startDate\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/sendWhatsappMessage?role=Staff&email=staffsc@gmail.com",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "sendWhatsappMessage"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "Staff",
+                  "description": "User role for authorization"
+                },
+                {
+                  "key": "email",
+                  "value": "staffsc@gmail.com",
+                  "description": "User email for authorization"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Whatsapp Parameter Options",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getWhatsappParameterOptions?role=Staff&email=staffsc@gmail.com",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getWhatsappParameterOptions"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "Staff"
+                },
+                {
+                  "key": "email",
+                  "value": "staffsc@gmail.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Wati Templates By Branch Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/getWatiTemplatesByBranchCode?role=Staff&email=staffsc@gmail.com",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "getWatiTemplatesByBranchCode"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "Staff"
+                },
+                {
+                  "key": "email",
+                  "value": "staffsc@gmail.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicmFuY2hzY0BnbWFpbC5jb20iLCJpYXQiOjE3ODQ3MzU2MjcsImV4cCI6MTc4NDczOTIyN30.uA4uZ_Pqco7WRBzBGXr0ePsJu3QEf8Ebdlp_RJ7rBRI",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "role",
+      "value": "ADMIN"
+    },
+    {
+      "key": "email",
+      "value": "admin@example.com"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "branchCode",
+      "value": "BR001"
+    },
+    {
+      "key": "userId",
+      "value": "1"
+    },
+    {
+      "key": "id",
+      "value": "1"
+    }
+  ]
+}

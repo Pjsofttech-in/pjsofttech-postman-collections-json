@@ -1,0 +1,640 @@
+{
+  "info": {
+    "name": "Bus Tracking API",
+    "description": "Postman collection for Bus Tracking endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "busTrackingURL",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Academic Years",
+      "item": [
+        {
+          "name": "Get All Academic Years",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/academic-years",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["academic-years"]
+            }
+          }
+        },
+        {
+          "name": "Get Academic Year By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/academic-years/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["academic-years", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Academic Year",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/academic-years",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["academic-years"]
+            }
+          }
+        },
+        {
+          "name": "Update Academic Year",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/academic-years/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["academic-years", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Academic Year",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/academic-years/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["academic-years", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bus",
+      "item": [
+        {
+          "name": "Get All Buses",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus"]
+            }
+          }
+        },
+        {
+          "name": "Get Bus By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Bus",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus"]
+            }
+          }
+        },
+        {
+          "name": "Update Bus",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Bus",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bus Locations",
+      "item": [
+        {
+          "name": "Get All Locations",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-locations",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-locations"]
+            }
+          }
+        },
+        {
+          "name": "Get Location By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-locations/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-locations", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Latest Location By Bus",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-locations/bus/1/latest",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-locations", "bus", "1", "latest"]
+            }
+          }
+        },
+        {
+          "name": "Get Location History By Bus",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-locations/bus/1/history?limit=20",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-locations", "bus", "1", "history"],
+              "query": [{"key": "limit", "value": "20"}]
+            }
+          }
+        },
+        {
+          "name": "Create Location",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-locations",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-locations"]
+            }
+          }
+        },
+        {
+          "name": "Delete Location",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-locations/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-locations", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bus Routes",
+      "item": [
+        {
+          "name": "Get All Routes",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-routes",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-routes"]
+            }
+          }
+        },
+        {
+          "name": "Get Route By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-routes/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-routes", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Route",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-routes",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-routes"]
+            }
+          }
+        },
+        {
+          "name": "Update Route",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-routes/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-routes", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Route",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-routes/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-routes", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bus Route Stops",
+      "item": [
+        {
+          "name": "Get All Route Stops",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-route-stops",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-route-stops"]
+            }
+          }
+        },
+        {
+          "name": "Get Route Stop By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-route-stops/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-route-stops", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Route Stops By Route",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-route-stops/route/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-route-stops", "route", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Route Stop",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-route-stops",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-route-stops"]
+            }
+          }
+        },
+        {
+          "name": "Update Route Stop",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-route-stops/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-route-stops", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Route Stop",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-route-stops/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-route-stops", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bus Stops",
+      "item": [
+        {
+          "name": "Get All Bus Stops",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-stops",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-stops"]
+            }
+          }
+        },
+        {
+          "name": "Get Bus Stop By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-stops/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-stops", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Bus Stop",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-stops",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-stops"]
+            }
+          }
+        },
+        {
+          "name": "Update Bus Stop",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-stops/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-stops", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Bus Stop",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-stops/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-stops", "1"]
+            }
+          }
+        },
+        {
+          "name": "Mark Stop Reached",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-stops/1/reached",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-stops", "1", "reached"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bus Trips",
+      "item": [
+        {
+          "name": "Get All Bus Trips",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-trips",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-trips"]
+            }
+          }
+        },
+        {
+          "name": "Get Bus Trip By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-trips/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-trips", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Bus Trip",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-trips",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-trips"]
+            }
+          }
+        },
+        {
+          "name": "Update Bus Trip",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-trips/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-trips", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Bus Trip",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/bus-trips/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["bus-trips", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Classes",
+      "item": [
+        {
+          "name": "Get All Classes",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/classes",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["classes"]
+            }
+          }
+        },
+        {
+          "name": "Get Class By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/classes/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["classes", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Class",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/classes",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["classes"]
+            }
+          }
+        },
+        {
+          "name": "Update Class",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/classes/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["classes", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Class",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/classes/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["classes", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Conductors",
+      "item": [
+        {
+          "name": "Get All Conductors",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/conductors",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["conductors"]
+            }
+          }
+        },
+        {
+          "name": "Get Conductor By Id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/conductors/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["conductors", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Conductor",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/conductors",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["conductors"]
+            }
+          }
+        },
+        {
+          "name": "Update Conductor",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{}"},
+            "url": {
+              "raw": "{{busTrackingURL}}/conductors/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["conductors", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Conductor",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{busTrackingURL}}/conductors/1",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["conductors", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Get Dashboard Data",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{busTrackingURL}}/dashboard",
+              "host": ["{{busTrackingURL}}"],
+              "path": ["dashboard"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
