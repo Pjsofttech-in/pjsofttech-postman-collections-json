@@ -1,0 +1,2473 @@
+{
+  "info": {
+    "_postman_id": "5c722244-9497-40e3-ab2d-b86d1e1abf3d",
+    "name": "Library Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54335742",
+    "_collection_link": "https://go.postman.co/collection/54335742-5c722244-9497-40e3-ab2d-b86d1e1abf3d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Mediums",
+      "item": [
+        {
+          "name": "Get All Mediums",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/mediums/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "mediums",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Medium By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/mediums/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "mediums",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Medium",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"English\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/mediums",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "mediums"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Medium",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Hindi\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/mediums/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "mediums",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Medium",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/mediums/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "mediums",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Academic Years",
+      "item": [
+        {
+          "name": "Get All Academic Years",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/academic-years/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "academic-years",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Academic Year By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/academic-years/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "academic-years",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Academic Year",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"2023-2024\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/academic-years",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "academic-years"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Academic Year",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"2024-2025\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/academic-years/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "academic-years",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Academic Year",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/academic-years/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "academic-years",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "Get All Authors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/authors/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "authors",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Author By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/authors/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "authors",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Author",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"J.K. Rowling\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/authors",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "authors"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Author",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"George R.R. Martin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/authors/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "authors",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Author",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/authors/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "authors",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Book Assign",
+      "item": [
+        {
+          "name": "Get All Assigned Books",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/book-assign/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "book-assign",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Book Assignment By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/book-assign/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "book-assign",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assign Book",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberName\": \"John Doe\",\n  \"bookTitle\": \"Spring Boot in Action\",\n  \"assignDate\": \"2026-08-04T10:00:00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/book-assign",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "book-assign"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Book Assignment",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberName\": \"John Doe\",\n  \"bookTitle\": \"Spring Boot in Action\",\n  \"assignDate\": \"2026-08-04T10:00:00\",\n  \"returnDate\": \"2026-08-11T10:00:00\",\n  \"status\": \"RETURNED\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/book-assign/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "book-assign",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Book Assignment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/book-assign/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "book-assign",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Get Today Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/dashboard/today",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "today"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Last 7 Days Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/dashboard/last-7-days",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "last-7-days"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Last 30 Days Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/dashboard/last-30-days",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "last-30-days"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Last 365 Days Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/dashboard/last-365-days",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "last-365-days"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Total Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/dashboard/total",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "total"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Divisions",
+      "item": [
+        {
+          "name": "Get All Divisions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/divisions/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "divisions",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Division By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/divisions/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "divisions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Division",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Science\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/divisions",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "divisions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Division",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Arts\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/divisions/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "divisions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Division",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/divisions/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "divisions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Floors",
+      "item": [
+        {
+          "name": "Get All Floors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/floors/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "floors",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Floor By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/floors/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "floors",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Floor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"First Floor\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/floors",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "floors"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Floor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Second Floor\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/floors/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "floors",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Floor",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/floors/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "floors",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Languages",
+      "item": [
+        {
+          "name": "Get All Languages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/languages/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "languages",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Language By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/languages/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "languages",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Language",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"English\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/languages",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "languages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Language",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Spanish\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/languages/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "languages",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Language",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/languages/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "languages",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "item": [
+        {
+          "name": "Get All Resources",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resources/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resources",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Resource By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resources/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resources",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Resource",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Spring Boot in Action\",\n  \"isbnBarcode\": \"9781617292545\",\n  \"resourceType\": \"BOOK\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/resources",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resources"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Resource",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Spring Boot in Action (Updated)\",\n  \"quantity\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/resources/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resources",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Resource",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resources/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resources",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Members",
+      "item": [
+        {
+          "name": "Get All Members",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/members/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Member By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/members/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Member (Form Data)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Jane Doe",
+                  "type": "text"
+                },
+                {
+                  "key": "mobileNo",
+                  "value": "1234567890",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "jane.doe@example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "profilePhoto",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/members/formdata",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                "formdata"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Member Details",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jane Smith\",\n  \"mobileNo\": \"0987654321\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/members/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Member Photo",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "profilePhoto",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/members/1/photo",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                "1",
+                "photo"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Member",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/members/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Member Restrictions",
+      "item": [
+        {
+          "name": "Get All Restrictions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/member-restrictions/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "member-restrictions",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Restriction By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/member-restrictions/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "member-restrictions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Restriction",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberName\": \"Jane Doe\",\n  \"restrictionType\": \"LATE_FEES\",\n  \"description\": \"Owes $5.00 for late return\",\n  \"active\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/member-restrictions",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "member-restrictions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Restriction",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"memberName\": \"Jane Doe\",\n  \"restrictionType\": \"LATE_FEES\",\n  \"description\": \"Paid in full\",\n  \"active\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/member-restrictions/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "member-restrictions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Restriction",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/member-restrictions/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "member-restrictions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Publishers",
+      "item": [
+        {
+          "name": "Get All Publishers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/publishers/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "publishers",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Publisher By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/publishers/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "publishers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Publisher",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"O'Reilly Media\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/publishers",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "publishers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Publisher",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Manning Publications\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/publishers/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "publishers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Publisher",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/publishers/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "publishers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Quantities",
+      "item": [
+        {
+          "name": "Get All Quantities",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/quantities/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "quantities",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Quantity By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/quantities/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "quantities",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Quantity",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"100 Copies\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/quantities",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "quantities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Quantity",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"200 Copies\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/quantities/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "quantities",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Quantity",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/quantities/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "quantities",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Racks",
+      "item": [
+        {
+          "name": "Get All Racks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/racks/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "racks",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Rack By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/racks/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "racks",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Rack",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rack A1\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/racks",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "racks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Rack",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rack A2\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/racks/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "racks",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Rack",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/racks/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "racks",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Titles",
+      "item": [
+        {
+          "name": "Get All Titles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/titles/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "titles",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Title By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/titles/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "titles",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Title",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Introduction to Algorithms\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/titles",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "titles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Title",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Design Patterns\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/titles/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "titles",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Title",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/titles/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "titles",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Resource Statuses",
+      "item": [
+        {
+          "name": "Get All Resource Statuses",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resource-statuses/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-statuses",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Resource Status By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resource-statuses/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-statuses",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Resource Status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"AVAILABLE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/resource-statuses",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-statuses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Resource Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"ISSUED\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/resource-statuses/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-statuses",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Resource Status",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resource-statuses/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-statuses",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Resource Types",
+      "item": [
+        {
+          "name": "Get All Resource Types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resource-types/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-types",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Resource Type By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resource-types/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-types",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Resource Type",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Book\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/resource-types",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-types"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Resource Type",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Journal\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/resource-types/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-types",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Resource Type",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/resource-types/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "resource-types",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rooms",
+      "item": [
+        {
+          "name": "Get All Rooms",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/rooms/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "rooms",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Room By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/rooms/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "rooms",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Room",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Room 101\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/rooms",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "rooms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Room",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Room 102\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/rooms/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "rooms",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Room",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/rooms/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "rooms",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Standards",
+      "item": [
+        {
+          "name": "Get All Standards",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/standards/all",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "standards",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Standard By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/standards/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "standards",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Standard",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"10th Grade\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/standards",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "standards"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Standard",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"11th Grade\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{library_URL}}/api/standards/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "standards",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Standard",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{library_URL}}/api/standards/1",
+              "host": [
+                "{{library_URL}}"
+              ],
+              "path": [
+                "api",
+                "standards",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{vault:bearer_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
