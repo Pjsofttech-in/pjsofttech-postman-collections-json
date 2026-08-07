@@ -1,0 +1,1222 @@
+{
+  "info": {
+    "_postman_id": "dbd57d62-d37d-4cea-8375-46796d473881",
+    "name": "Billing API Collection Copy",
+    "description": "Postman collection for the Billing Spring Boot API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54335742",
+    "_collection_link": "https://go.postman.co/collection/54335742-dbd57d62-d37d-4cea-8375-46796d473881?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/auth/login",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product Attribute Value",
+      "item": [
+        {
+          "name": "Create Product Attribute Value",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'attributeId': 1, 'value': 'Red'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createProductAttributeValue",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createProductAttributeValue"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Attribute",
+      "item": [
+        {
+          "name": "Create Attribute",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'name': 'Color', 'description': 'Product Color Variant'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createAttribute",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createAttribute"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Attributes By Product Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/by-product-type/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "by-product-type",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Brand",
+      "item": [
+        {
+          "name": "Create Brand",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'name': 'Nike', 'description': 'Sportswear and Accessories'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createBrand",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createBrand"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Brands",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllBrands",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllBrands"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Brand By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getBrandById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getBrandById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Brand",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteBrand/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteBrand",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "Create Customer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'firstName': 'John', 'lastName': 'Doe', 'email': 'john.doe@example.com', 'phone': '1234567890'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createCustomer",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createCustomer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllCustomers",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllCustomers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Customer By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getCustomerById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getCustomerById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Customer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'firstName': 'John', 'lastName': 'Smith', 'email': 'john.smith@example.com', 'phone': '9876543210'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/updateCustomer/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "updateCustomer",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Customer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteCustomer/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteCustomer",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'customerId': 1, 'orderDate': '2023-10-15', 'totalAmount': 1500.50, 'status': 'PENDING'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createOrder",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createOrder"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllOrders",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllOrders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Order By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getOrderById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getOrderById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Order",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteOrder/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteOrder",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Order Item",
+      "item": [
+        {
+          "name": "Create Order Item",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/createOrderItem?orderId=1&productId=101&quantity=2",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createOrderItem"
+              ],
+              "query": [
+                {
+                  "key": "orderId",
+                  "value": "1"
+                },
+                {
+                  "key": "productId",
+                  "value": "101"
+                },
+                {
+                  "key": "quantity",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Order Items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllOrderItems",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllOrderItems"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Order Item By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getOrderItemById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getOrderItemById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Order Item",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteOrderItem/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteOrderItem",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "Create Payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'paymentMethod': 'CREDIT_CARD', 'amount': 1500.50, 'status': 'SUCCESS'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createPayment?orderId=1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createPayment"
+              ],
+              "query": [
+                {
+                  "key": "orderId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Payments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllPayments",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllPayments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payment By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getPaymentById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getPaymentById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Payment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deletePayment/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deletePayment",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vendor",
+      "item": [
+        {
+          "name": "Create Vendor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"vendorName\": \"Ramesh Kumar\",\r\n    \"companyName\": \"Apex Trading Corp\",\r\n    \"gstNo\": \"27AAAAA1111A1Z1\",\r\n    \"landmark\": \"Opposite Railway Station\",\r\n    \"city\": \"Pune\",\r\n    \"taluka\": \"Haveli\",\r\n    \"state\": \"MAHARASHTRA\",\r\n    \"pincode\": \"411001\",\r\n    \"email\": \"contact@apextrading.com\",\r\n    \"phone\": \"9876543210\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createVendor",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createVendor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Vendors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getallVendor",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getallVendor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Vendor By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getbyIdVendor/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getbyIdVendor",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Vendor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'name': 'Tech Supplies Co Updated', 'contactNumber': '0987654321', 'email': 'updated@techsupplies.com'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/updateVendor/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "updateVendor",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Vendor",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteVendor/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteVendor",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'name': 'Wireless Mouse', 'sku': 'WM-001', 'price': 25.50}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createProduct",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createProduct"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllProducts",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllProducts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getProductById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getProductById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteProduct/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteProduct",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product Type Attribute",
+      "item": [
+        {
+          "name": "Create Product Type Attribute",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'productTypeId': 1, 'attributeId': 2}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createProductTypeAttribute",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createProductTypeAttribute"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Product Type Attributes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllProductTypeAttribute",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllProductTypeAttribute"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product Type Attribute By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getByIdProductTypeAttribute/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getByIdProductTypeAttribute",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product Type Attribute",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteProductTypeAttribute/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteProductTypeAttribute",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product Type",
+      "item": [
+        {
+          "name": "Create Product Type",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'name': 'Electronics', 'description': 'Consumer electronic devices'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createProductType",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createProductType"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Product Types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllProductTypes",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllProductTypes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product Type By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getProductTypeById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getProductTypeById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product Type",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteProductType/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteProductType",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Shipment",
+      "item": [
+        {
+          "name": "Create Shipment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'orderId': 1, 'trackingNumber': 'TRK987654321', 'carrier': 'FedEx', 'status': 'SHIPPED'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createShipment",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createShipment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Shipments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllShipments",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllShipments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Shipment By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getShipmentById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getShipmentById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Shipment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteShipment/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteShipment",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Unit Type",
+      "item": [
+        {
+          "name": "Create Unit Type",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{'name': 'Kilogram', 'abbreviation': 'kg'}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{billing_URL}}/createUnitType",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "createUnitType"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Unit Types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getAllUnitTypes",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getAllUnitTypes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Unit Type By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/getUnitTypeById/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "getUnitTypeById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Unit Type",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{billing_URL}}/deleteUnitType/1",
+              "host": [
+                "{{billing_URL}}"
+              ],
+              "path": [
+                "deleteUnitType",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearer_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
