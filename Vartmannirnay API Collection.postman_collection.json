@@ -1,0 +1,7554 @@
+{
+  "info": {
+    "_postman_id": "82171284-2d9e-4dcd-bd9c-8beb3004e206",
+    "name": "Vartmannirnay API Collection",
+    "description": "Comprehensive Postman collection for the Vartmannirnay Backend Application with empty body templates.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54335742",
+    "_collection_link": "https://go.postman.co/collection/54335742-82171284-2d9e-4dcd-bd9c-8beb3004e206?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Book Store",
+      "item": [
+        {
+          "name": "Create Book",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "book",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "demoPdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createBook",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createBook"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "book",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "demoPdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateBook/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateBook",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Books",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllBooks",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllBooks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Book By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getBookById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getBookById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteBook/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteBook",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "About Us",
+      "item": [
+        {
+          "name": "Save About Us",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveAboutUs",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveAboutUs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update About Us",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateAboutUs/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateAboutUs",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete About Us",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteAboutUs/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteAboutUs",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All About Us",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/allAboutUs",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "allAboutUs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get About Us By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AboutUsById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AboutUsById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Add Question",
+      "item": [
+        {
+          "name": "Add Question",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "createQuestion",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "createQuestionFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "questionType",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "section",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "optionA",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "optionAFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "optionB",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "optionBFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "optionC",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "optionCFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "optionD",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "optionDFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "optionE",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "optionEFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "answerSupportingFileName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "answerSupportingFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "correctAnswer",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "marks",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "answerExplanation",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/addQuestions",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "addQuestions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Question",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "createQuestion",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "questionType",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "section",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "correctAnswer",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "marks",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "answerExplanation",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateQuestion/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateQuestion",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Questions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllQuestions",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllQuestions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Question By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/QuestionById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "QuestionById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Question",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteQuestion/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteQuestion",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Questions By Section",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/QuestionsBySection/Programming",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "QuestionsBySection",
+                "Programming"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Questions By Sections (Multiple)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/QuestionsBySections?sectionNames=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "QuestionsBySections"
+              ],
+              "query": [
+                {
+                  "key": "sectionNames",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Questions By Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/QuestionsByType?questionType=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "QuestionsByType"
+              ],
+              "query": [
+                {
+                  "key": "questionType",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Question Count By Section",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/questioncountbysection?section=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "questioncountbysection"
+              ],
+              "query": [
+                {
+                  "key": "section",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Total Question Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/countofquestion",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "countofquestion"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Address",
+      "item": [
+        {
+          "name": "Save Address",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveAddress",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveAddress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Address",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateAddress/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateAddress",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Address",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteAddress/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteAddress",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Addresses",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllAddresses",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllAddresses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Address By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AddressById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AddressById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Admin Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/AdminLogin",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AdminLogin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/UserLogin",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "UserLogin"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Book Category",
+      "item": [
+        {
+          "name": "Create BkCategory",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "category",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createBkCategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createBkCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update BkCategory",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "category",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateBkCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateBkCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All BkCategory",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllBkCategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllBkCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get BkCategory By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getByIdBkCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getByIdBkCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete BkCategory",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteBkCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteBkCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Book Publisher",
+      "item": [
+        {
+          "name": "Create Publisher",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createPublisher",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createPublisher"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Publisher",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updatePublisher/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updatePublisher",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Publisher",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deletePublisher/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deletePublisher",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Publisher By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getPublisherById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getPublisherById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Publishers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllPublishers",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllPublishers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Book SubCategory",
+      "item": [
+        {
+          "name": "Create SubCategory",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/createsubcategory?subcategory=&categoryId=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createsubcategory"
+              ],
+              "query": [
+                {
+                  "key": "subcategory",
+                  "value": ""
+                },
+                {
+                  "key": "categoryId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update SubCategory",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/updatesubcategory/1?subcategory=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updatesubcategory",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "subcategory",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All SubCategories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllsubcategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllsubcategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get SubCategory By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getByIdsubcategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getByIdsubcategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get SubCategory By Category Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getsubcategorybycategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getsubcategorybycategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete SubCategory",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deletesubcategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deletesubcategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Book Writer",
+      "item": [
+        {
+          "name": "Create Writer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createWriter",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createWriter"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Writer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateWriter/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateWriter",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Writer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteWriter/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteWriter",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Writer By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getWriterById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getWriterById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Writers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllWriters",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllWriters"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Book Payment & Order",
+      "item": [
+        {
+          "name": "Create Book Payment Order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/createBookPayment?bookId=&email=&phone=&userId=&addressId=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createBookPayment"
+              ],
+              "query": [
+                {
+                  "key": "bookId",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "phone",
+                  "value": ""
+                },
+                {
+                  "key": "userId",
+                  "value": ""
+                },
+                {
+                  "key": "addressId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Paid Books By User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/bookorders/user/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "bookorders",
+                "user",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Book Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/bookorders",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "bookorders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Tracking Details",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/bookorders/ORDER_123/tracking?sentBy=&trackingNumber=&sendingStatus=&sendingDate=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "bookorders",
+                "ORDER_123",
+                "tracking"
+              ],
+              "query": [
+                {
+                  "key": "sentBy",
+                  "value": ""
+                },
+                {
+                  "key": "trackingNumber",
+                  "value": ""
+                },
+                {
+                  "key": "sendingStatus",
+                  "value": ""
+                },
+                {
+                  "key": "sendingDate",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Overall Order Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/stats",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "stats"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Monthly Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getMonthlyStats?year=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getMonthlyStats"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Daily Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getDailyStats?year=&month=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getDailyStats"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Category Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getCategoryStats",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getCategoryStats"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Social Media",
+      "item": [
+        {
+          "name": "Save Social Media",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveSocialMedia",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveSocialMedia"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Social Media",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateSocialMedia/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateSocialMedia",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Social Media",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteSocialMedia/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteSocialMedia",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Social Media",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/allSocialMedia",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "allSocialMedia"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Social Media By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/SocialMediaById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "SocialMediaById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cashfree Payment (Material)",
+      "item": [
+        {
+          "name": "Create Material Payment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/createPaymentcashfree?materialId=&email=&phone=&userId=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createPaymentcashfree"
+              ],
+              "query": [
+                {
+                  "key": "materialId",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "phone",
+                  "value": ""
+                },
+                {
+                  "key": "userId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-webhook-signature",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/webhook",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "webhook"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Paid Materials By User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/materials/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "materials",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Paid Orders By User Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/user/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "user",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllOrders",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllOrders"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cashfree Test Series Payment",
+      "item": [
+        {
+          "name": "Create Test Series Payment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/createTestSeriesPayment?testSeriesId=&email=&phone=&userId=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createTestSeriesPayment"
+              ],
+              "query": [
+                {
+                  "key": "testSeriesId",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "phone",
+                  "value": ""
+                },
+                {
+                  "key": "userId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Paid Test Series By User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/testseries/user/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "testseries",
+                "user",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Test Series Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/testseries/orders",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "testseries",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Revenue And Count By Test Series",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getRevenueAndCountByTestSeries",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getRevenueAndCountByTestSeries"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Monthly Revenue And Count By Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getMonthlyRevenueAndCountByYear?year=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getMonthlyRevenueAndCountByYear"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Daily Revenue And Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/dailyrevenue?year=&month=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "dailyrevenue"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Series Order Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getTestSeriesOrderStats",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getTestSeriesOrderStats"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Delete User",
+      "item": [
+        {
+          "name": "Create Delete User Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/create",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Delete User Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/update/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "update",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/delete/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "delete",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Delete User Request By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Delete User Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAll",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Marquee",
+      "item": [
+        {
+          "name": "Save Marquee",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveMarquee",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveMarquee"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Marquee",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateMarquee/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateMarquee",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Marquee",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteMarquee/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteMarquee",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Marquees",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllMarquees",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllMarquees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Marquee By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/MarqueeById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "MarqueeById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pop Up",
+      "item": [
+        {
+          "name": "Create Pop Up",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "link",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createPopUp",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createPopUp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Pop Up",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "link",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updatePopUp/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updatePopUp",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Pop Up",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deletePopUp/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deletePopUp",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Pop Ups",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllPopUps",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllPopUps"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Pop Up By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/PopUpById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "PopUpById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Sent By",
+      "item": [
+        {
+          "name": "Create Sent By",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createSentBy",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createSentBy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Sent By",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateSentBy/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateSentBy",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Sent By",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteSentBy/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteSentBy",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Sent By",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllSentBy",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllSentBy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Sent By By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/SentByById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "SentByById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Share (Social Meta)",
+      "item": [
+        {
+          "name": "Share Ebook HTML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/ebook/1/slug-name",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "ebook",
+                "1",
+                "slug-name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Ebook Share Image",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/image/ebook/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "image",
+                "ebook",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Share Epaper HTML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/epaper/1/slug-name",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "epaper",
+                "1",
+                "slug-name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Epaper Share Image",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/image/epaper/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "image",
+                "epaper",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Share Test Series HTML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/test-series/1/slug-name",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "test-series",
+                "1",
+                "slug-name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Series Share Image",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/image/test-series/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "image",
+                "test-series",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Share Advertisement HTML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/advertisement/1/slug-name",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "advertisement",
+                "1",
+                "slug-name"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Advertisement Share Image",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/share/image/advertisement/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "share",
+                "image",
+                "advertisement",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Shipment",
+      "item": [
+        {
+          "name": "Create Shipment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createShipment",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createShipment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Shipment",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateShipment/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateShipment",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Shipment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteShipment/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteShipment",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Shipments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllShipments",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllShipments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Shipment By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/ShipmentById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "ShipmentById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Orders By User Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/OrdersByUserEmail?email=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "OrdersByUserEmail"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Sitemap",
+      "item": [
+        {
+          "name": "Get Sitemap XML",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/sitemap.xml",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "sitemap.xml"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VM Category",
+      "item": [
+        {
+          "name": "Create VM Category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "createdDate",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "materialtype_id",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createVMCategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createVMCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM Category By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMCategoryById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMCategoryById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VM Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVMCategories",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVMCategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VM Category",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "createdDate",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVMCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVMCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VM Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVMCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVMCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search By VM Category Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/searchByVMcategoryName?categoryName=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "searchByVMcategoryName"
+              ],
+              "query": [
+                {
+                  "key": "categoryName",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM Categories By Date Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMCategoriesByDateRange?filter=&startDate=&endDate=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMCategoriesByDateRange"
+              ],
+              "query": [
+                {
+                  "key": "filter",
+                  "value": ""
+                },
+                {
+                  "key": "startDate",
+                  "value": ""
+                },
+                {
+                  "key": "endDate",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM Categories By Material Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMCategoriesByMaterialType?materialTypeName=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMCategoriesByMaterialType"
+              ],
+              "query": [
+                {
+                  "key": "materialTypeName",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Test & Results",
+      "item": [
+        {
+          "name": "Submit Test",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/submitTest/1/1?startTime=&endTime=&timeTaken=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "submitTest",
+                "1",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "startTime",
+                  "value": ""
+                },
+                {
+                  "key": "endTime",
+                  "value": ""
+                },
+                {
+                  "key": "timeTaken",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TestResult/1/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TestResult",
+                "1",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Solved Test Papers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/UserSolvedTestPapers/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "UserSolvedTestPapers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Solved Test Paper",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/SingleSolvedTestPaper/1/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "SingleSolvedTestPaper",
+                "1",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Solved Test Papers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllSolvedTestPapers/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllSolvedTestPapers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Solved Test Paper Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/SolvedTestPaperCount/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "SolvedTestPaperCount",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Ranking",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/ranking/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "ranking",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Solved Question Paper",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/SolvedQuestionPaper/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "SolvedQuestionPaper",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Question Analysis Response",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/QuestionAnalysisResponse?userId=&testPaperId=&type=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "QuestionAnalysisResponse"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": ""
+                },
+                {
+                  "key": "testPaperId",
+                  "value": ""
+                },
+                {
+                  "key": "type",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Attempt Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AttemptCount/1/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AttemptCount",
+                "1",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Test Paper",
+      "item": [
+        {
+          "name": "Create Test Paper",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createTestPaper",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createTestPaper"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Test Papers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllTestPapers",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllTestPapers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Paper By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TestPaperById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TestPaperById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Test Paper",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateTestPaper/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateTestPaper",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Test Paper",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteTestPaper/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteTestPaper",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Papers By Test Series",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TestPapersByTestSeries/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TestPapersByTestSeries",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Questions To Test Paper",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[]"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/addQuestionsToTestPaper/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "addQuestionsToTestPaper",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Paper Questions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TestPaperQuestions/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TestPaperQuestions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Question Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/QuestionCount/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "QuestionCount",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Questions From Test Paper",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[]"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/removequestions/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "removequestions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Test Paper Image",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/1/uploadTestPaperImage",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "1",
+                "uploadTestPaperImage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Test Paper Image",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/1/updateTestPaperImage",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "1",
+                "updateTestPaperImage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Show Test Paper Result",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/updateShowTestPaperResult/1?showTestResult=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateShowTestPaperResult",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "showTestResult",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Show All Result",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/updateShowAllResult/1?showAllResult=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateShowAllResult",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "showAllResult",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload All Result Pdf",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/uploadAllResultPdf/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "uploadAllResultPdf",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update All Result Pdf",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateAllResultPdf/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateAllResultPdf",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Download Test Paper",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/updateDownloadTestPaper/1?downloadTestPaper=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateDownloadTestPaper",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "downloadTestPaper",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Test Series",
+      "item": [
+        {
+          "name": "Create Test Series",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createTestSeries",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createTestSeries"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Test Series",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllTestSeries",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllTestSeries"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Series By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TestSeriesById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TestSeriesById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Test Series",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateTestSeries/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateTestSeries",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Test Series",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteTestSeries/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteTestSeries",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Test Series Image",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/uploadImage/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "uploadImage",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Test Series Image",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateImage/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateImage",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Test Series Names",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllTestSeriesNames",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllTestSeriesNames"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Test Series By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TestSeriesByCategory?category=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TestSeriesByCategory"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Admin",
+      "item": [
+        {
+          "name": "Create Admin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createAdmin",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createAdmin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/adminLogin",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "adminLogin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/forgotPassword?adminEmail=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "forgotPassword"
+              ],
+              "query": [
+                {
+                  "key": "adminEmail",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify OTP",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/verifyOtp?adminEmail=&otp=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "verifyOtp"
+              ],
+              "query": [
+                {
+                  "key": "adminEmail",
+                  "value": ""
+                },
+                {
+                  "key": "otp",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/resetPassword?adminEmail=&newPassword=&confirmPassword=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "resetPassword"
+              ],
+              "query": [
+                {
+                  "key": "adminEmail",
+                  "value": ""
+                },
+                {
+                  "key": "newPassword",
+                  "value": ""
+                },
+                {
+                  "key": "confirmPassword",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V Admin By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VAdminById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VAdminById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Ads Category",
+      "item": [
+        {
+          "name": "Save V Ads Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVAdsCategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVAdsCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update V Ads Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVAdsCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVAdsCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All V Ads Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVAdsCategories",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVAdsCategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V Ads Category By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VAdsCategoryById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VAdsCategoryById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete V Ads Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVAdsCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVAdsCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Ads Exam Category",
+      "item": [
+        {
+          "name": "Save V Ads Exam Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVAdsExamCategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVAdsExamCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update V Ads Exam Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVAdsExamCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVAdsExamCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All V Ads Exam Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVAdsExamCategories",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVAdsExamCategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V Ads Exam Category By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VAdsExamCategoryById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VAdsExamCategoryById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete V Ads Exam Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVAdsExamCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVAdsExamCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Advertisement",
+      "item": [
+        {
+          "name": "Save V Advertisement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "seo",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "adsCategory",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "adsExamCategory",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "officialWebsiteLink",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "applyNowLink",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "lastDateToApply",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "pdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVAdvertisement",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVAdvertisement"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update V Advertisement",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "adsCategory",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "adsExamCategory",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "createdDate",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "officialWebsiteLink",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "applyNowLink",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "lastDateToApply",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "pdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVAdvertisement/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVAdvertisement",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Advertisements",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllAdvertisements",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllAdvertisements"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V Advertisement By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VAdvertisementById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VAdvertisementById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete V Advertisement",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVAdvertisement/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVAdvertisement",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Advertisement Count By Timeframe",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AdvertisementCountByTimeframe?timeframe=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AdvertisementCountByTimeframe"
+              ],
+              "query": [
+                {
+                  "key": "timeframe",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Advertisement Count By Month",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AdvertisementCountByMonth?month=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AdvertisementCountByMonth"
+              ],
+              "query": [
+                {
+                  "key": "month",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Advertisement Count By Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AdvertisementCountByYear?year=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AdvertisementCountByYear"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Advertisement Count By Month And Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AdvertisementCountByMonthAndYear?year=&month=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AdvertisementCountByMonthAndYear"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Advertisement Year Comparison",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AdvertisementYearComparison?year1=&year2=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AdvertisementYearComparison"
+              ],
+              "query": [
+                {
+                  "key": "year1",
+                  "value": ""
+                },
+                {
+                  "key": "year2",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vartman Nirnay Paper",
+      "item": [
+        {
+          "name": "Save Vartman Nirnay Paper",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "paperName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVartmanNirnayPaper",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVartmanNirnayPaper"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Vartman Nirnay Paper",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "paperName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVartmanNirnayPaper/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVartmanNirnayPaper",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Vartman Nirnay Paper",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVartmanNirnayPaper/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVartmanNirnayPaper",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Vartman Nirnay Paper By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getVartmanNirnayPaperById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getVartmanNirnayPaperById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Vartman Nirnay Papers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVartmanNirnayPapers",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVartmanNirnayPapers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Vartman Nirnay Papers Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VartmanNirnayPapersCount?timeframe=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VartmanNirnayPapersCount"
+              ],
+              "query": [
+                {
+                  "key": "timeframe",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Count Vartman Nirnay Papers By Month",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/CountVartmanNirnayPapersByMonth?month=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "CountVartmanNirnayPapersByMonth"
+              ],
+              "query": [
+                {
+                  "key": "month",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Count Vartman Nirnay Papers By Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/CountVartmanNirnayPapersByYear?year=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "CountVartmanNirnayPapersByYear"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Count Vartman Nirnay Papers By Month & Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/CountVartmanNirnayPapersByMonth&Year?year=&month=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "CountVartmanNirnayPapersByMonth&Year"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Count Vartman Nirnay Papers By Year Comparison",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/CountVartmanNirnayPapersByYearComparison?year1=&year2=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "CountVartmanNirnayPapersByYearComparison"
+              ],
+              "query": [
+                {
+                  "key": "year1",
+                  "value": ""
+                },
+                {
+                  "key": "year2",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Contact Us",
+      "item": [
+        {
+          "name": "Save V Contact Us",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVContactUs",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVContactUs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update V Contact Us",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVContactUs/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVContactUs",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete V Contact Us",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVContactUs/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVContactUs",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All V Contact Us",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVContactUs",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVContactUs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V Contact Us By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VContactUsById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VContactUsById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Sponsor Pdf",
+      "item": [
+        {
+          "name": "Save VN Sponsor Pdf",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "pdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVNSponsorPdf",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVNSponsorPdf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VN Sponsor Pdf",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "pdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVNSponsorPdf/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVNSponsorPdf",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VN Sponsor Pdf",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVNSponsorPdf/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVNSponsorPdf",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VN Sponsor Pdf",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/allVNSponsorPdf",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "allVNSponsorPdf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VN Sponsor Pdf By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VNSponsorPdfById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VNSponsorPdfById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VM Material",
+      "item": [
+        {
+          "name": "Create VM Material",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "materialtype",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "saveToDevice",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "status",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "mrp",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "validity",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "chapterName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "seo",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "discription",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "subcategory.id",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "demoPdf",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "pdfFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "thumbnailFile",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createVMMaterial",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createVMMaterial"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VM Material",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "materialtype",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "saveToDevice",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "status",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "mrp",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "validity",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "chapterName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "seo",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "discription",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "subcategoryName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "demoPdf",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "pdfFile",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "thumbnailFile",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVMMaterial/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVMMaterial",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM Material By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMMaterialById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMMaterialById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VM Materials",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVMMaterials",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVMMaterials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VM Material",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVMMaterial/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVMMaterial",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Toggle Download",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/toggledownload/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "toggledownload",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VM Material Type",
+      "item": [
+        {
+          "name": "Create VM Material Type",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createVMMaterialType",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createVMMaterialType"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM Material Type By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMMaterialTypeById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMMaterialTypeById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VM Material Types",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVMMaterialTypes",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVMMaterialTypes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VM Material Type",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVMMaterialType/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVMMaterialType",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VM Material Type",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVMMaterialType/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVMMaterialType",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VM Report",
+      "item": [
+        {
+          "name": "Count & Revenue Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/Count&RevenueReport",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "Count&RevenueReport"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Monthly Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/MonthlyReport?year=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "MonthlyReport"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Yearly Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/YearlyReport",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "YearlyReport"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Compare Years",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/CompareYears?year1=&year2=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "CompareYears"
+              ],
+              "query": [
+                {
+                  "key": "year1",
+                  "value": ""
+                },
+                {
+                  "key": "year2",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Category Revenue By Category Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/CategoryRevenueByCategoryName?categoryName=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "CategoryRevenueByCategoryName"
+              ],
+              "query": [
+                {
+                  "key": "categoryName",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "All Category Revenue",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllCategoryRevenue",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllCategoryRevenue"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Daily Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getDailyReport?year=&month=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getDailyReport"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VM Subcategory",
+      "item": [
+        {
+          "name": "Create VM SubCategory",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createVMSubCategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createVMSubCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM SubCategory By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMSubCategoryById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMSubCategoryById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VM SubCategories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVMSubCategories",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVMSubCategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VM SubCategory",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVMSubCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVMSubCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VM Subcategory",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVMSubcategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVMSubcategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search By VM Subcategory",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/searchByVMSubcategory?subcategoryName=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "searchByVMSubcategory"
+              ],
+              "query": [
+                {
+                  "key": "subcategoryName",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM subcategory By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMsubcategoryByCategory?categoryName=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMsubcategoryByCategory"
+              ],
+              "query": [
+                {
+                  "key": "categoryName",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VM Subcategory by category name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VMSubcategorybycategoryname?categoryName=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VMSubcategorybycategoryname"
+              ],
+              "query": [
+                {
+                  "key": "categoryName",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VM User Material",
+      "item": [
+        {
+          "name": "Add User Material Association",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/addUserMaterialAssociation",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "addUserMaterialAssociation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User And Materials By Username And Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/UserAndMaterialsByUsernameAndEmail?email=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "UserAndMaterialsByUsernameAndEmail"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All User Material",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllUserMaterial",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllUserMaterial"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Group Link",
+      "item": [
+        {
+          "name": "Create Group Link",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/creategroupLink",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "creategroupLink"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Group Link",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updategroupLink/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updategroupLink",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get By Id Group Link",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getByIdgroupLink/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getByIdgroupLink",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Group Link",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllgroupLink",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllgroupLink"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Group Link",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deletegroupLink/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deletegroupLink",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Mobile No",
+      "item": [
+        {
+          "name": "Create Mobile No",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createmobileNo",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createmobileNo"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Mobile No",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updatemobileNo/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updatemobileNo",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get By Id Mobile No",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getByIdmobileNo/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getByIdmobileNo",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Mobile No",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllmobileNo",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllmobileNo"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Mobile No",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deletemobileNo/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deletemobileNo",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Notification",
+      "item": [
+        {
+          "name": "Send Notification",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/send-notification",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "send-notification"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Todays Notifications",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TodaysNotifications",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TodaysNotifications"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "All Notifications",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllNotifications",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllNotifications"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Notifications By User Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/NotificationsByUserId/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "NotificationsByUserId",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Todays Notifications By User Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/TodaysNotificationsByUserId/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "TodaysNotificationsByUserId",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Sponsor",
+      "item": [
+        {
+          "name": "Create VN Sponsor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "sponsorName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "ankName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createVNSponsor",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createVNSponsor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VN Sponsor",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "sponsorName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "ankName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVNSponsor/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVNSponsor",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VN Sponsor",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVNSponsor/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVNSponsor",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VN Sponsor By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VNSponsorById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VNSponsorById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VN Sponsors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVNSponsors",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVNSponsors"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V User",
+      "item": [
+        {
+          "name": "Add User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/addUser",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "addUser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getUserById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getUserById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getAllUser",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getAllUser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateUser/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateUser",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteUser/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteUser",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/Userlogin",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "Userlogin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send OTP",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/sendotp?email=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "sendotp"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify OTP",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/verifyOTP?email=&otp=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "verifyOTP"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "otp",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset User Password",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/resetUserPassword?email=&password=&confirmPassword=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "resetUserPassword"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "password",
+                  "value": ""
+                },
+                {
+                  "key": "confirmPassword",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/getUserByemail?email=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "getUserByemail"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update FCM Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/updatefcmtoken?userId=&fcmToken=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updatefcmtoken"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": ""
+                },
+                {
+                  "key": "fcmToken",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Sponsor Title",
+      "item": [
+        {
+          "name": "Save VN Sponsor Title",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVNSponsorTitle",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVNSponsorTitle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VN Sponsor Titles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/allVNSponsorTitles",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "allVNSponsorTitles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VN Sponsor Title By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VNSponsorTitleById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VNSponsorTitleById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VN Sponsor Title",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVNSponsorTitle/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVNSponsorTitle",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VN Sponsor Title",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVNSponsorTitle/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVNSponsorTitle",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Winner",
+      "item": [
+        {
+          "name": "Create VN Winner",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "winnerName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "ankName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createVNWinner",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createVNWinner"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VN Winner",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "winnerName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "month",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "year",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "ankName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVNWinner/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVNWinner",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VN Winner",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVNWinner/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVNWinner",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VN Winner By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VNWinnerById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VNWinnerById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VN Winners",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVNWinners",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVNWinners"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Winner Pdf",
+      "item": [
+        {
+          "name": "Save VN Winner Pdf",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "pdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVNWinnerPdf",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVNWinnerPdf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VN Winner Pdf",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "description",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "pdf",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVNWinnerPdf/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVNWinnerPdf",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VN Winner Pdf",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVNWinnerPdf/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVNWinnerPdf",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VN Winner Pdfs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/allVNWinnerPdf",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "allVNWinnerPdf"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VN Winner Pdf By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VNWinnerPdfById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VNWinnerPdfById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VN Winner Title",
+      "item": [
+        {
+          "name": "Save VN Winner Title",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVNWinnerTitle",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVNWinnerTitle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All VN Winner Titles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/allVNWinnerTitles",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "allVNWinnerTitles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get VN Winner Title By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VNWinnerTitleById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VNWinnerTitleById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update VN Winner Title",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVNWinnerTitle/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVNWinnerTitle",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete VN Winner Title",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVNWinnerTitle/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVNWinnerTitle",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Package",
+      "item": [
+        {
+          "name": "Save V Package",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "packageName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "packageDescription",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "packageType",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "discount",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "discountPrice",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "validity",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "seo",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "papers",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVPackage",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVPackage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update V Package",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "packageName",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "packageDescription",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "packageType",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "discount",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "discountPrice",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "validity",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "seo",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "papers",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVPackage/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVPackage",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All V Packages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVPackages",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVPackages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V Package By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VPackageById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VPackageById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete V Package",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVPackage/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVPackage",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Paper To Package",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/addPaperToPackage?packageId=&paperId=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "addPaperToPackage"
+              ],
+              "query": [
+                {
+                  "key": "packageId",
+                  "value": ""
+                },
+                {
+                  "key": "paperId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Paper From Package",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/removePaperFromPackage?packageId=&paperId=",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "removePaperFromPackage"
+              ],
+              "query": [
+                {
+                  "key": "packageId",
+                  "value": ""
+                },
+                {
+                  "key": "paperId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Packages By Paper Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/PackagesByPaperId/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "PackagesByPaperId",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V Slide Image",
+      "item": [
+        {
+          "name": "Save V Slide Image",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "link",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "thumbnailFile",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/saveVSlideImage",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "saveVSlideImage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update V Slide Image",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "link",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "thumbnailFile",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVSlideImage/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVSlideImage",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All V Slide Images",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVSlideImages",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVSlideImages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V Slide Image By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VSlideImageById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VSlideImageById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete V Slide Image",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVSlideImage/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVSlideImage",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V T Category",
+      "item": [
+        {
+          "name": "Create V T Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createVTCategory",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createVTCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All V T Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllVTCategories",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllVTCategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get V T Category By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/VTCategoryById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "VTCategoryById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update V T Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateVTCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateVTCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete V T Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteVTCategory/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteVTCategory",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "V T Section",
+      "item": [
+        {
+          "name": "Create Section",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/createSection",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "createSection"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Sections",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/AllSections",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "AllSections"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Section By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/SectionById/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "SectionById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Section",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{vartman_URL}}/updateSection/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "updateSection",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Section",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{vartman_URL}}/deleteSection/1",
+              "host": [
+                "{{vartman_URL}}"
+              ],
+              "path": [
+                "deleteSection",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "vartman_URL",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
