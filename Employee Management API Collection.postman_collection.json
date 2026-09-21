@@ -1,0 +1,2601 @@
+{
+  "info": {
+    "_postman_id": "a44a2957-b5cb-4136-9e19-b25bafe82d7e",
+    "name": "Employee Management API Collection",
+    "description": "Postman collection for the Employee Management System controllers. Auth is inherited from parent.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54335742",
+    "_collection_link": "https://go.postman.co/collection/54335742-a44a2957-b5cb-4136-9e19-b25bafe82d7e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "User Login",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/userLogin",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "userLogin"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Attendance",
+      "item": [
+        {
+          "name": "Mark Attendance From Face",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/Raj/Desktop/Revati-2.jpeg"
+                  ]
+                },
+                {
+                  "key": "requestDto",
+                  "value": "{\n  \"empId\": 227,\n  \"branchCode\": \"BCH759\"\n}\n",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{employee_URL}}/markAttendanceForEmployee",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "markAttendanceForEmployee"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Employee Logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "branchCode",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{employee_URL}}/employeeLogout",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "employeeLogout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Employee Break In",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "branchCode",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{employee_URL}}/employeeBreakIn",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "employeeBreakIn"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Employee Break Out",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "branchCode",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{employee_URL}}/employeeBreakOut",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "employeeBreakOut"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Attendance Filter",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/AttendanceFilter?role=&email=&timeFrame=&customStartDate=&customEndDate=&page=0&size=10",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "AttendanceFilter"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "timeFrame",
+                  "value": ""
+                },
+                {
+                  "key": "customStartDate",
+                  "value": ""
+                },
+                {
+                  "key": "customEndDate",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Today Attendance Summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/TodayAttendaceSummary?branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "TodayAttendaceSummary"
+              ],
+              "query": [
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Attendance By Emp Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAttendanceByEmpId?empId=&role=&email=&timeFrame=&customStartDate=&customEndDate=&page=0&size=10",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAttendanceByEmpId"
+              ],
+              "query": [
+                {
+                  "key": "empId",
+                  "value": ""
+                },
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "timeFrame",
+                  "value": ""
+                },
+                {
+                  "key": "customStartDate",
+                  "value": ""
+                },
+                {
+                  "key": "customEndDate",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Attendance Count For Salary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAttendaceCountForSalaryCalculation?empId=&month=&year=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAttendaceCountForSalaryCalculation"
+              ],
+              "query": [
+                {
+                  "key": "empId",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Mark Attendance Manually",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/markAttendanceEmployeeManually?empIds=&role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "markAttendanceEmployeeManually"
+              ],
+              "query": [
+                {
+                  "key": "empIds",
+                  "value": ""
+                },
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Get Employee Count For Cards",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getEmployeeCountForCardsAndGraph?role=&email=&filter=&branchCode=&startDate=&endDate=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getEmployeeCountForCardsAndGraph"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "filter",
+                  "value": ""
+                },
+                {
+                  "key": "branchCode",
+                  "value": ""
+                },
+                {
+                  "key": "startDate",
+                  "value": ""
+                },
+                {
+                  "key": "endDate",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Salary Summary For Cards",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/geSalarySummeryForCards?role=&email=&month=&year=&branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "geSalarySummeryForCards"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Salary Comparison Two Months",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/SalaryComparisonBetweenTwoMonth?role=&email=&month=&year=&branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "SalaryComparisonBetweenTwoMonth"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Salary Comparison By Years",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/SalaryComparisonByYears?role=&email=&year1=&year2=&branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "SalaryComparisonByYears"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "year1",
+                  "value": ""
+                },
+                {
+                  "key": "year2",
+                  "value": ""
+                },
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Salary Revenue By Month Of Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getSalaryRevenewByMonthofYear?role=&email=&year=&branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getSalaryRevenewByMonthofYear"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                },
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Monthly Attendance By Emp Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getMonthlyAttendaceByEmpId?role=&email=&empId=&month=&year=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getMonthlyAttendaceByEmpId"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "empId",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Salaries Of Month By Year",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getSalariesOfMonthByYear?role=&email=&empId=&year=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getSalariesOfMonthByYear"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "empId",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leave Report By Year By Emp Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getLeaveReportByYearByEmpId?role=&email=&empId=&year=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getLeaveReportByYearByEmpId"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "empId",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Cards Data For Admin",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getCardsDataForAdmin?role=&email=&filter=&branchCode=&startDate=&endDate=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getCardsDataForAdmin"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "filter",
+                  "value": ""
+                },
+                {
+                  "key": "branchCode",
+                  "value": ""
+                },
+                {
+                  "key": "startDate",
+                  "value": ""
+                },
+                {
+                  "key": "endDate",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Paid Pending Salary By Month",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getPaidPendingSalaryByMonth?role=&email=&month=&year=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getPaidPendingSalaryByMonth"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "month",
+                  "value": ""
+                },
+                {
+                  "key": "year",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Department",
+      "item": [
+        {
+          "name": "Create Department",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/createDepartment?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "createDepartment"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Departments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAllDepartments?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAllDepartments"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Department By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getDepartmentById/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getDepartmentById",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Department",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/updateDepartment/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateDepartment",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Department",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/deleteDepartment/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "deleteDepartment",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employee Category",
+      "item": [
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/createCategory?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "createCategory"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAllCategories?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAllCategories"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Category By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getCategoryById/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getCategoryById",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/updateCategory/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateCategory",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/deleteCategory/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "deleteCategory",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Category By Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getCategoryByName/Staff?branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getCategoryByName",
+                "Staff"
+              ],
+              "query": [
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Total Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getTotalCategory?branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getTotalCategory"
+              ],
+              "query": [
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Non Deleted Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getNonDeletedCategories?branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getNonDeletedCategories"
+              ],
+              "query": [
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employee",
+      "item": [
+        {
+          "name": "Create Employee",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "employeeDTO",
+                  "value": "{}",
+                  "type": "text"
+                },
+                {
+                  "key": "role",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "departmentId",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "categoryId",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "idProof",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "employeePhoto",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "resume",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "addressProof",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "experienceLetter",
+                  "type": "file",
+                  "value": null
+                },
+                {
+                  "key": "slipImage",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{employee_URL}}/createEmployee",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "createEmployee"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Employee (Filtered)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/getAllEmployee?role=&email=&timeFrame=&startDate=&endDate=&page=0&size=10",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAllEmployee"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "timeFrame",
+                  "value": ""
+                },
+                {
+                  "key": "startDate",
+                  "value": ""
+                },
+                {
+                  "key": "endDate",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Employee By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getEmployeeById/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getEmployeeById",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Employee",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "employeeDTO",
+                  "value": "{\n  \"empEmail\": \"revatibansode303@gmail.com\"\n}",
+                  "type": "text"
+                },
+                {
+                  "key": "role",
+                  "value": "staff",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "staffsc@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "departmentId",
+                  "value": "70",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "categoryId",
+                  "value": "128",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "idProof",
+                  "type": "file",
+                  "src": [
+                    ""
+                  ],
+                  "disabled": true
+                },
+                {
+                  "key": "employeePhoto",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/Raj/Desktop/Revati-Emp.jpeg"
+                  ]
+                },
+                {
+                  "key": "resume",
+                  "type": "file",
+                  "src": [
+                    ""
+                  ],
+                  "disabled": true
+                },
+                {
+                  "key": "addressProof",
+                  "type": "file",
+                  "src": [
+                    ""
+                  ],
+                  "disabled": true
+                },
+                {
+                  "key": "experienceLetter",
+                  "type": "file",
+                  "src": [
+                    ""
+                  ],
+                  "disabled": true
+                },
+                {
+                  "key": "slipImage",
+                  "type": "file",
+                  "src": [
+                    ""
+                  ],
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{employee_URL}}/updateEmployee/227",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateEmployee",
+                "227"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Employee",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/deleteEmployee/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "deleteEmployee",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Carry Forward Leaves",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/carryforward",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "carryforward"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Employee Status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/updateStatus/1?role=&email=&Status=&date=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateStatus",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "Status",
+                  "value": ""
+                },
+                {
+                  "key": "date",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upcoming Employee Birthdays",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/upcomingEmployeeBirthdays?branchCode=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "upcomingEmployeeBirthdays"
+              ],
+              "query": [
+                {
+                  "key": "branchCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Employee Attendance Response By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getEmployeeAttendaceResponesId/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getEmployeeAttendaceResponesId",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send OTP to Employee",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/sendOtpToEmployee?email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "sendOtpToEmployee"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Employee Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/resetEmployeePassword?email=&otp=&newPassword=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "resetEmployeePassword"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "otp",
+                  "value": ""
+                },
+                {
+                  "key": "newPassword",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employee Query",
+      "item": [
+        {
+          "name": "Create Emp Query",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/createEmpQuery?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "createEmpQuery"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Emp Queries",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAllEmpQueries?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAllEmpQueries"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Emp Query By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getEmpQueryById/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getEmpQueryById",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Emp Query",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/updateEmpQuery/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateEmpQuery",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Emp Query",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/deleteEmpQuery/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "deleteEmpQuery",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Feedback",
+      "item": [
+        {
+          "name": "Create Feedback",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/createFeedBack?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "createFeedBack"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Feedback",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/updateFeedBack/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateFeedBack",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Feedback",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/allFeedBack?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "allFeedBack"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Feedback By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getFeedBackbyId/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getFeedBackbyId",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Feedback By Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getFeedBackbyEmail?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getFeedBackbyEmail"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Feedback",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/deleteFeedBack/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "deleteFeedBack",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Holidays",
+      "item": [
+        {
+          "name": "Create Holiday",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/createHoliday?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "createHoliday"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Holidays",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAllHolidays?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAllHolidays"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Holiday By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getHolidayById/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getHolidayById",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Holiday",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/updateHoliday/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateHoliday",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Holiday",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/deleteHoliday/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "deleteHoliday",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Leave Request",
+      "item": [
+        {
+          "name": "Create Leave Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/createLeaveRequest?employeeId=&role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "createLeaveRequest"
+              ],
+              "query": [
+                {
+                  "key": "employeeId",
+                  "value": ""
+                },
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Leave Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAllLeaveRequests?role=&email=&name=&status=&branchCode=&page=0&size=10",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAllLeaveRequests"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "name",
+                  "value": ""
+                },
+                {
+                  "key": "status",
+                  "value": ""
+                },
+                {
+                  "key": "branchCode",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leave Request By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getLeaveRequestById/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getLeaveRequestById",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Leave Request",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{employee_URL}}/updateLeaveRequest/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "updateLeaveRequest",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Leave Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/deleteLeaveRequest/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "deleteLeaveRequest",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Leave Status",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/leaveStatus/1?status=&role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "leaveStatus",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": ""
+                },
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Leave Summary By Emp Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getLeaveSummary/1?role=&email=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getLeaveSummary",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Leaves By Employee Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/getAllLeavesByEmployeeId?role=&email=&empID=",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "getAllLeavesByEmployeeId"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": ""
+                },
+                {
+                  "key": "email",
+                  "value": ""
+                },
+                {
+                  "key": "empID",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employee Salary Structure",
+      "item": [
+        {
+          "name": "Create Salary Structure",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"employeeId\": 193,\n    \"basicSalary\": 20000,\n    \"hra\": 0,\n    \"otherAllowances\": 0,\n    \"monthlyIncentive\": 0,\n    \"pfApplicable\": true,\n    \"employeePfPercentage\": 12,\n    \"employerPfPercentage\": 12,\n    \"effectiveFrom\": \"2026-09-01\",\n    \"effectiveTo\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{employee_URL}}/api/employee-salary-structure/create",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "api",
+                "employee-salary-structure",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Salary Structure",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"employeeId\": 193,\n    \"basicSalary\": 12000,\n    \"hra\": 2000,\n    \"otherAllowances\": 1000,\n    \"monthlyIncentive\": 500,\n    \"pfApplicable\": true,\n    \"employeePfPercentage\": 12,\n    \"employerPfPercentage\": 12,\n    \"effectiveFrom\": \"2026-09-01\",\n    \"effectiveTo\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{employee_URL}}/api/employee-salary-structure/:salaryStructureId",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "api",
+                "employee-salary-structure",
+                ":salaryStructureId"
+              ],
+              "variable": [
+                {
+                  "key": "salaryStructureId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Salary Structure By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/api/employee-salary-structure/:salaryStructureId",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "api",
+                "employee-salary-structure",
+                ":salaryStructureId"
+              ],
+              "variable": [
+                {
+                  "key": "salaryStructureId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Current Salary Structure",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/api/employee-salary-structure/employee/:employeeId",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "api",
+                "employee-salary-structure",
+                "employee",
+                ":employeeId"
+              ],
+              "variable": [
+                {
+                  "key": "employeeId",
+                  "value": "193"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Salary History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/api/employee-salary-structure/employee/:employeeId/history",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "api",
+                "employee-salary-structure",
+                "employee",
+                ":employeeId",
+                "history"
+              ],
+              "variable": [
+                {
+                  "key": "employeeId",
+                  "value": "193"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Salary Structure",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{employee_URL}}/api/employee-salary-structure/{{salaryStructureId}}",
+              "host": [
+                "{{employee_URL}}"
+              ],
+              "path": [
+                "api",
+                "employee-salary-structure",
+                "{{salaryStructureId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{vault:bearer_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "employee_URL",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
